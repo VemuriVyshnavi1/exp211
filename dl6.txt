@@ -1,0 +1,41 @@
+mymodels.weights
+
+
+
+
+history.history
+
+
+
+
+
+history.history.keys()
+
+
+
+
+
+
+import matplotlib.pyplot as plt
+history_dict=history.history
+loss=history.history["loss"]
+val_loss=history.history["val_loss"]
+epochs=range(1,len(loss)+1)
+epochs1=range(1,len(val_loss)+1)
+plt.plot(epochs,loss,"bo",label="Training loss")
+plt.plot(epochs1,val_loss,"b",label="validation loss")
+plt.title("training loss")
+
+
+
+
+plt.clf()
+acc=history.history["accuracy"]
+val_acc=history.history["val_accuracy"]
+epochs=range(1,len(acc)+1)
+epochs1=range(1,len(val_acc)+1)
+plt.plot(epochs,acc,"bo",label="training acc")
+plt.plot(epochs1,val_acc,"b",label="validation_acc")
+plt.title("Training accuracy and validation accuracy")
+plt.xlabel("Epochs")
+plt.ylabel("loss")
